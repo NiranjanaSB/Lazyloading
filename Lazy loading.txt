@@ -1,0 +1,23 @@
+Lazy loading:
+Lazy loading is a routing technique in which the JavaScript components load in the browser only when their corresponding route is activated. The main aim of lazy loading is to improve the performance of the Angular app by restricting the unnecessary loading of components
+Example:
+If We created an Angular app without lazy loading the performence of the app is reduced compare to use the lazy lopading and If use the lazy loading then the JavaScript of login screen will be loaded at the start of the application and the JavaScript of the dashboard will only be loaded when the routes match for the dashboard.
+
+
+Intialization of lazy loading
+
+private int myWidgetID;
+private Widget myWidget = null;
+
+public Widget MyWidget
+{
+    get
+    {
+        if (myWidget == null)
+        {
+            myWidget = Widget.Load(myWidgetID);
+        }
+
+        return myWidget;
+    }
+}
